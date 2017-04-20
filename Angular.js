@@ -1,6 +1,4 @@
-/**
- * Created by Lokendra on 13-03-2017.
- */
+
 (function (){
 
 var app=angular.module('cricketMatch',['ngRoute']); // module with no dependencies
