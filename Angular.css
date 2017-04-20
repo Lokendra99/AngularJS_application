@@ -1,0 +1,88 @@
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .font_change{
+        font-size: 1.3em;
+    }
+
+}
+@media only screen and (min-device-width: 482px) and (max-device-width:767px){
+
+    .font_change{
+        font-size: 1em;
+    }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    .font_change{
+        font-size: 1.7em;
+    }
+
+}
+@media only screen and (min-device-width : 1025px) and (max-device-width : 1223px) {
+
+    .font_change{
+        font-size: 1em;
+    }
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+
+
+    .font_change{
+        font-size: 1.3em;
+    }
+
+
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+
+    .font_change{
+        font-size: 1em;
+    }
+
+}
+
+
+
+
+
+table{
+     font-size: 1em;
+ }
+.inside_div_styling{
+    background-color: #00aff0;
+}
+
+.style{
+    background-color: #eeeaee;
+}
+body{
+    background-image: url("http://wallpapercave.com/wp/PEepxxL.jpg");
+    height: 600px;
+    width:100%;
+    background-attachment: fixed;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+.styling{
+    background-color: white;
+}
+.buttn_spacing{
+    text-align: center;
+    padding-top: 50px;
+}
+.styling_selected_menus{
+    padding-top: 20px;
+    text-align: center;
+}
+.font_styling{
+    color: white;
+}
