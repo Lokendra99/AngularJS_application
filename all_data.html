@@ -1,0 +1,72 @@
+
+<div  class="container" ng-controller="allMatchDetails as innings">
+    <div class=" styling_selected_menus" >
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-4">
+                <button   ng-click="innings.all_data_reveal_hide_condition();innings.other_score_year_wise_data_hide();innings.teamly_data()" class="btn btn-primary font_change ">  Data per Team</button>
+                <select ng-model="data5"  ng-options="c for (c,d) in innings.team_wise_data" id="reset1" class="btn btn-default btn-select btn-select-light"><option value="0">Please select</option></select>
+            </div>
+            <div class= "col-xs-12 col-sm-12 col-lg-4">
+                <button   ng-click="innings.all_data_reveal_hide_condition();innings.other_team_score_wise_data_hide();innings.yearly_data()"class="btn btn-primary font_change">  Data per year</button>
+                <select ng-model="data4" ng-options="p for (p,r) in innings.data_per_year" id="reset3" class="btn btn-default btn-select btn-select-light"><option value="0" >Please select</option></select>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-4">
+
+                 <button   ng-click="innings.all_data_reveal_hide_condition();innings.other_team_year_wise_data_hide();innings.scorely_data()"class="btn btn-primary font_change"> Data by score</button>
+                 <select ng-model="data6" ng-options="t for (t,s) in innings.score_wise_data" id='reset2' class="btn btn-default btn-select btn-select-light"><option value="0">Please select</option></select>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+   <div id="score_data">
+       <table class="table  table-bordered table-responsive styling font_change" ng-repeat="(x,y) in data6" style="text-align:left">
+           <tr><td>{{"Name of team1"}}</td><td>{{y.Name_of_the_team1}}</td></tr>
+           <tr><td>{{"Name of team2"}}</td><td>{{y.Name_of_the_team2}}</td></tr>
+           <tr><td>{{"Score of team1"}}</td><td>{{y.Score_of_the_team1}}</td></tr>
+           <tr><td>{{"Score of team2"}}</td><td>{{y.Score_of_the_team2}}</td></tr>
+           <tr><td>{{"Date"}}</td><td>{{y.Date}}</td></tr>
+       </table>
+   </div>
+    <div id="team_wise">
+        <table class="table table-striped table-bordered table-responsive styling font_change" ng-repeat="(x,y) in data5" style="text-align:left">
+            <tr><td>{{"Name of team1"}}</td><td>{{y.Name_of_the_team1}}</td></tr>
+            <tr><td>{{"Name of team2"}}</td><td>{{y.Name_of_the_team2}}</td></tr>
+            <tr><td>{{"Score of team1"}}</td><td>{{y.Score_of_the_team1}}</td></tr>
+            <tr><td>{{"Score of team2"}}</td><td>{{y.Score_of_the_team2}}</td></tr>
+            <tr><td>{{"Date"}}</td><td>{{y.Date}}</td></tr>
+        </table>
+    </div>
+    <div id="year_wise">
+        <table class="table table-striped table-bordered table-responsive styling font_change" ng-repeat="(x,y) in data4" style="text-align:left">
+            <tr><td>{{"Name of team1"}}</td><td>{{y.Name_of_the_team1}}</td></tr>
+            <tr><td>{{"Name of team2"}}</td><td>{{y.Name_of_the_team2}}</td></tr>
+            <tr><td>{{"Score of team1"}}</td><td>{{y.Score_of_the_team1}}</td></tr>
+            <tr><td>{{"Score of team2"}}</td><td>{{y.Score_of_the_team2}}</td></tr>
+            <tr><td>{{"Date"}}</td><td>{{y.Date}}</td></tr>
+        </table>
+    </div>
+
+
+
+    <div id="hiding">
+        <h3></h3>
+        <div id="hiding"  ng-repeat="x in innings.match_data_array" class="font_change">
+            <H2 class="font_styling font_change"><b>{{"Name of the matchSeries"}}</b></H2><h3 class="font_styling font_change"><b>{{ x.name}}</b></h3>
+            <table class="table table-bordered table-condensed table-striped styling"  ng-repeat="y in x.matches" >
+                <tr><td><b>{{"Name of the team1"}}</b></td><td>{{y.team1.name}}({{y.team1.code}})</td></tr>
+                <tr><td><b>{{"Name of the team2"}}</b></td><td>{{y.team2.name}}({{y.team2.code}})</td></tr>
+                <tr><td><b>{{"Score of the team1"}}</b></td><td>{{y.score1}}</td></tr>
+                <tr><td><b>{{"Score of the team2"}}</b></td><td>{{y.score2}}</td></tr>
+                <tr> <td><b>{{"Date"}}</b></td><td>{{y.date|date : 'dd/MM/yyyy'}}</td></tr>
+
+            </table>
+
+        </div>
+
+
+    </div>
+</div>
