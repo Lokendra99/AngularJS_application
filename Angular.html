@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app='cricketMatch' lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="Angular.js"></script>
+    <link rel="stylesheet" href="Angular.css">
+    <title>Matches data</title>
+</head>
+<body >
+
+    <!--<a href="#all_data"> <button class="btn btn-primary" ng-click="innings.all_data_reveal()">Complete Data about all Matches</button></a>-->
+    <div class="buttn_spacing">
+    <a href="#all_data"> <button class="btn btn-primary font_change ">Complete Data about all Matches</button></a><br><br>
+    <a href="#single_match_details"> <button class="btn btn-primary font_change" >Single Match Details</button></a><br><br>
+    <a href="#statistical_data"> <button class="btn btn-primary font_change">Statistical Data</button></a><br>
+    </div>
+    <div ng-view>
+
+    </div>
+
+</body>
+</html>
